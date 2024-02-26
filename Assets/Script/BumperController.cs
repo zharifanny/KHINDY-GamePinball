@@ -5,13 +5,16 @@ using UnityEngine;
 public class BumperController : MonoBehaviour
 {
     public Color color;
-
     public Collider bola;
     public float multiplier;
     private Renderer renderer;
     private Animator animator;
+    public VFXManager VFXManager;
+    public AudioManager audioManager;
+    public ScoreManager scoreManager;
+    public float score;
 
-public AudioManager audioManager;
+
 
 
 
@@ -29,6 +32,9 @@ public AudioManager audioManager;
             // saat ditabrak oleh bola, kita tinggal aktifkan trigger Hit
             animator.SetTrigger("hit");
             audioManager.PlaySFX(collision.transform.position);
+            VFXManager.PlayVFX(collision.transform.position);
+            scoreManager.AddScore(score);
+
         }
     }
 

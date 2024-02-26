@@ -7,6 +7,8 @@ public class SwitchController : MonoBehaviour
     public Collider bola;
     public Material offMaterial;
     public Material onMaterial;
+    public ScoreManager scoreManager;
+    public float score;
 
     private bool isOn;
     private Renderer renderer;
@@ -41,6 +43,7 @@ public class SwitchController : MonoBehaviour
         {
             Set(true);
         }
+        scoreManager.AddScore(score);
     }
 
     private void OnTriggerEnter(Collider other)
