@@ -65,12 +65,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets/Script/BoxController.cs" />
+    <Compile Include="Assets/Script/SFXAudioController.cs" />
     <Compile Include="Assets/Script/PaddleController.cs" />
     <Compile Include="Assets/Script/Launcher.cs" />
     <Compile Include="Assets/Script/SwitchController.cs" />
     <Compile Include="Assets/TutorialInfo/Scripts/Readme.cs" />
     <Compile Include="Assets/Script/BallController.cs" />
     <Compile Include="Assets/Script/BumperController.cs" />
+    <Compile Include="Assets/Script/AudioManager.cs" />
     <Compile Include="Assets/Script/CubeSpawn.cs" />
     <Compile Include="Assets/Script/BoxDestroyer.cs" />
   </ItemGroup>

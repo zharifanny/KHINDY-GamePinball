@@ -11,6 +11,9 @@ public class BumperController : MonoBehaviour
     private Renderer renderer;
     private Animator animator;
 
+public AudioManager audioManager;
+
+
 
 
     private void OnCollisionEnter(Collision collision)
@@ -25,6 +28,7 @@ public class BumperController : MonoBehaviour
 
             // saat ditabrak oleh bola, kita tinggal aktifkan trigger Hit
             animator.SetTrigger("hit");
+            audioManager.PlaySFX(collision.transform.position);
         }
     }
 
@@ -36,6 +40,7 @@ public class BumperController : MonoBehaviour
 
         // kita akses materialnya dan kita ubah warna nya saat Start
         renderer.material.color = color;
+
     }
 
     // // Start is called before the first frame update
