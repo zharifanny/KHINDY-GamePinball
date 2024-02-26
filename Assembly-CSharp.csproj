@@ -73,6 +73,8 @@
     <Compile Include="Assets/Script/Launcher.cs" />
     <Compile Include="Assets/Script/ScoreManager.cs" />
     <Compile Include="Assets/Script/TriggerRampController.cs" />
+    <Compile Include="Assets/Script/GameOverUIController.cs" />
+    <Compile Include="Assets/Script/TriggerGameOver.cs" />
     <Compile Include="Assets/Script/SwitchController.cs" />
     <Compile Include="Assets/Script/MainMenuUIController.cs" />
     <Compile Include="Assets/TutorialInfo/Scripts/Readme.cs" />
