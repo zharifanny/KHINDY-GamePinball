@@ -9,9 +9,14 @@ public class SwitchController : MonoBehaviour
     public Material onMaterial;
     public ScoreManager scoreManager;
     public float score;
-
+    public AudioManager audioManager;
+    public VFXManager VFXManager;
     private bool isOn;
     private new Renderer renderer;
+    public Color color;
+    private Animator animator;
+
+
 
     private enum SwitchState
     {
@@ -27,7 +32,11 @@ public class SwitchController : MonoBehaviour
     {
         renderer = GetComponent<Renderer>();
         Set(false);
-         StartCoroutine(BlinkTimerStart(5));
+        StartCoroutine(BlinkTimerStart(5));
+
+        animator = GetComponent<Animator>();
+        // kita akses materialnya dan kita ubah warna nya saat Start
+        renderer.material.color = color;
     }
 
     private void Toggle()
@@ -53,6 +62,8 @@ public class SwitchController : MonoBehaviour
             // jalankan coroutine blink
             // StartCoroutine(Blink(2));
             Toggle();
+            audioManager.PlaySFX(other.transform.position);
+            VFXManager.PlayVFX(other.transform.position);
         }
     }
 

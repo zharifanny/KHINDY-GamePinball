@@ -10,7 +10,7 @@ public class MainMenuUIController : MonoBehaviour
     public Button playButton;
     public Button exitButton;
     public Button creditButton;
-    public Button backButton;
+    // public Button backButton;
 
 
     private void Start()
@@ -18,7 +18,7 @@ public class MainMenuUIController : MonoBehaviour
         playButton.onClick.AddListener(PlayGame);
         exitButton.onClick.AddListener(ExitGame);
         creditButton.onClick.AddListener(CreditMenu);
-        backButton.onClick.AddListener(BackButton);
+        // backButton.onClick.AddListener(BackButton);
     }
 
     public void PlayGame()
@@ -36,8 +36,8 @@ public class MainMenuUIController : MonoBehaviour
         SceneManager.LoadScene("CreditMenu");
     }
 
-    private void BackButton()
-    {
-        SceneManager.LoadScene("MainMenu");
-    }
+    // private void BackButton()
+    // {
+    //     SceneManager.LoadScene("MainMenu");
+    // }
 }
