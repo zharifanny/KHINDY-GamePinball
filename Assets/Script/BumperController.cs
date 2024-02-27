@@ -7,7 +7,7 @@ public class BumperController : MonoBehaviour
     public Color color;
     public Collider bola;
     public float multiplier;
-    private Renderer renderer;
+    private new Renderer renderer;
     private Animator animator;
     public VFXManager VFXManager;
     public AudioManager audioManager;

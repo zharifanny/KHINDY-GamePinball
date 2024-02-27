@@ -11,7 +11,7 @@ public class SwitchController : MonoBehaviour
     public float score;
 
     private bool isOn;
-    private Renderer renderer;
+    private new Renderer renderer;
 
     private enum SwitchState
     {
@@ -26,7 +26,6 @@ public class SwitchController : MonoBehaviour
     private void Start()
     {
         renderer = GetComponent<Renderer>();
-
         Set(false);
          StartCoroutine(BlinkTimerStart(5));
     }
